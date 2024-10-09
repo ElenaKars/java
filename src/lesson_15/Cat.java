@@ -6,9 +6,9 @@ package lesson_15;
  */
 
 public class Cat {
-    String name;
-    String color;
-    int age;
+    public String name;
+    public String color;
+    public int age;
 
     // Конструктор класса
     // Специальный тип метода.
