@@ -8,27 +8,26 @@
 
 package homework_20.task_1;
 
-import homework_20.Shape;
-
 public class Rectangle extends Shape {
     private double width;
     private double height;
 
 
-        public Rectangle(String name, String color, double width, double height) {
-        super(name, color);
-        this.width = width;
-        this.height = height;
-        this.setColor("green");
-    }
+//        public Rectangle(String name, String color, double width, double height) {
+//        super(name, color);
+//        this.width = width;
+//        this.height = height;
+//        this.setColor("green");
+//    }
 
     public void setDimensions(double width, double height){
         this.width = width;
         this.height = height;
     }
 
-    public void calculateArea(){
+    public double calculateArea(){
         double area = height * width;
         System.out.println("Площадь прямоугольника: " + area);
+        return area;
     }
 }

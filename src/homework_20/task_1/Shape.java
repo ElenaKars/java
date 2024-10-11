@@ -22,20 +22,32 @@
 //•	Аналогично создаете класс Circle.
 //•	В методе main работаете с объектами Rectangle и Circle, используя унаследованные и собственные методы этих классов.
 
-package homework_20;
+package homework_20.task_1;
 
 public class Shape {
     private String name;
     private String color;
 
-    public Shape(String name, String color) {
-        this.name = name;
-        this.color = color;
-    }
+//    public Shape(String name, String color) {
+//        this.name = name;
+//        this.color = color;
+//    }
 
     public void displayInfo(){
         System.out.println("Hазвание фигуры: " + name);
         System.out.println("Цвет фигуры: " + color);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public void setColor(String color){

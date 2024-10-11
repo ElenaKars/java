@@ -8,16 +8,14 @@
 
 package homework_20.task_1;
 
-import homework_20.Shape;
-
 public class Circle extends Shape {
 
     private double radius;
 
-    public Circle(String name, String color) {
-        super(name, color);
-        this.setColor("red");
-    }
+//    public Circle(String name, String color) {
+//        super(name, color);
+//        this.setColor("red");
+//    }
 
     public void setRadius(double radius){
         this.radius = radius;
