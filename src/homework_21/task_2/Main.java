@@ -10,11 +10,15 @@ package homework_21.task_2;
 
 public class Main {
     public static void main(String[] args) {
-        Processor processor = new Processor("intel ", " 1234");
-        Memory memory = new Memory("Toshiba ", " 12309");
         Storage storage = new Storage("Apple ", " 1 TB");
 
-        Computer computer = new Computer(processor, memory, storage);
+        Computer computer = new Computer(storage);
         computer.displayInfo();
+
+        Computer computer1 = new Computer(new Storage("Samsung", "1TB"));
+        computer1.storage = new Storage("DDp", "67543");  // Прямое изменение поля
+        System.out.println(computer1.storage.getBrand());
+
+        System.out.println(computer1.getStorage().toString());
     }
 }
