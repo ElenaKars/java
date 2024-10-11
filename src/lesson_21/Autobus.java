@@ -95,8 +95,17 @@ public class Autobus {
     }
 
     public String toString(){
-        return " {id: " + id + ", capacity: " + capacity +
-                "; " + driver.toString() + "; " + autopilot.toString() +
-                "}";
+        StringBuilder sb = new StringBuilder();
+        sb.append("{id:").append(id);
+        sb.append(", capacity: ").append(capacity);
+        sb.append("; ").append(driver.toString());
+        sb.append("; ").append(autopilot.toString());
+        sb.append("}");
+
+        return sb.toString();
+
+//        return " {id: " + id + ", capacity: " + capacity +
+//                "; " + driver.toString() + "; " + autopilot.toString() +
+//                "}";
     }
 }
