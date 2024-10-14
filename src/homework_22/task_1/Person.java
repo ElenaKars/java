@@ -13,18 +13,56 @@ public class Person {
        public int speed;
        public int restTime;
 
+       private String typeRunner = "Person";
+
     public Person() {
         this.speed = 10;
         this.restTime = 15;
     }
 
+    public Person(int speed, int restTime) {
+        this.speed = speed;
+        this.restTime = restTime;
+    }
+
     public void run(){
-        System.out.println("The speed of the Person is " + speed + "km/h");
+        System.out.printf("The speed of %s is %d km/h\n", typeRunner, speed);
         rest();
     }
 
     public void rest(){
-        System.out.println("The person needs rest time " + restTime + "min");
+        System.out.printf("%s needs rest time %d min\n",typeRunner, restTime);
     }
 
+
+    public String getTypeRunner() {
+        return typeRunner;
+    }
+
+    public void setTypeRunner(String typeRunner) {
+        this.typeRunner = typeRunner;
+    }
+
+    public int getRestTime() {
+        return restTime;
+    }
+
+    public void setRestTime(int restTime) {
+        this.restTime = restTime;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    @Override
+    public String toString() {
+        return "run speed: " + speed +
+                ", rest time: " + restTime +
+                ", type: " + typeRunner;
+    }
 }
