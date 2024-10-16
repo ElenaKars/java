@@ -90,7 +90,7 @@ public class MagicArrayGenetic<T>{
                 return array[index];
             }
             // Написать код, если индекс "не корректный"
-            return Integer.MIN_VALUE; // Хорошего решения нет.
+            return null; // Хорошего решения нет.
             //Todo Поправить обработку не корректного индекса
         }
 
@@ -118,12 +118,12 @@ public class MagicArrayGenetic<T>{
             } else {
 //           Индекс не валидный
                 // Todo поправить возвращаемое значение при невалидном индексе
-                return Integer.MIN_VALUE;
+                return null;
         }
 
         // Поиск по значению. Первое вхождение
         // {1, 100, 5, 5, 100} -> 100 метод вернет индекс первого найдено вхождения = 1
-        public int indexOf(T value) {
+            public int indexOf(T value) {
             for (int i = 0; i < cursor; i++) {
                 if (array[i].equals(value)) {
                     return i;
@@ -146,18 +146,13 @@ public class MagicArrayGenetic<T>{
             return -1;
         }
 
-        // Удаление элемента по значению
-        public boolean removeByValue(T value) {
-        /*
-        1. Есть ли элемент с таким значение в массиве - indexOf
-        2. Если элемента нет - вернуть false
-        3. Если элемент есть - удалить и вернуть true - вызвать удаление по индексу
-         */
-            int index = indexOf(value);
-            if (index == -1) return false;
 
-            remove(index);
-            return true;
+            public boolean removeByValue(T value) {
+                int index = indexOf(value);
+                if (index == -1) return false;
+
+                remove(index);
+                return true;
         }
 
 
