@@ -178,4 +178,4 @@ public class MagicArrayEncaps {
 11. Написать метод lastIndexOf(int value) возвращающий индекс последнего вхождения значения в массиве.
 
  */
-}
+
