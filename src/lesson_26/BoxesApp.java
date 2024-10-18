@@ -13,5 +13,8 @@ public class BoxesApp {
         boxObject.setValue(1);
 
         System.out.println((doubleBox.getValue() + 5.0));
+
+        SuperBoxGen<Integer> intBox = new SuperBoxGen<>(100);
+        System.out.println((intBox.getValue() + 200));
     }
 }

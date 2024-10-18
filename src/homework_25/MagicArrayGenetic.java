@@ -42,7 +42,7 @@ public class MagicArrayGenetic<T>{
             }
         }
 
-
+    @SuppressWarnings("unchecked")
         // Динамическое расширение массива
         private void expandArray() {
             System.out.println("Расширяем массив! Курсор = " + cursor);
