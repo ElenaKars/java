@@ -12,6 +12,6 @@ public class MethodsApp {
         System.out.println(sum);
 
         MyArrayList<String> strings1 = new MyArrayList<>();
-        strings1.add("Spain", "Germany", "Russia");
+        strings1.addAll("Spain", "Germany", "Russia");
     }
 }

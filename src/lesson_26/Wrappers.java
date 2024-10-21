@@ -118,7 +118,7 @@ public class Wrappers {
         System.out.println("intPrimitive: " + intPrimitive);
 
         MyArrayList<Integer> myArrayList = new MyArrayList<>();
-        myArrayList.add(1, 2, 3, 4, 5, 6, 7);
+        myArrayList.addAll(1, 2, 3, 4, 5, 6, 7);
         double listSum = Util.listSum(myArrayList);
     }
 }
