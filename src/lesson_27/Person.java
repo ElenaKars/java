@@ -36,7 +36,9 @@ public class Person {
         if(dotIndexAfterAt == -1) return false;
 
         //После последней точки есть 2 или более символов
-        if(email.length() - email.lastIndexOf(".") >= 2) return false;
+        int lastDotInd = email.lastIndexOf('.');
+
+        if(lastDotInd + 2 >= email.length()) return false;
 
         //Алфавит, цифры, '-', '_', '.', '@'
         for (int i = 0; i < email.length(); i++) {
