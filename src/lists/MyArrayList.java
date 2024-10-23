@@ -2,6 +2,17 @@ package lists;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Iterator;
+
+//iterable - означает, что все объекты класса можно перебирать (итерировать).
+//Содержит только один метод, который возвращает итератор
+//(объект-закладку, который позволяет перебирать коллекцию)
+//Iterator<T> Iterator () - возвращает итератор для коллекции
+
+// iteraror - позволяет обходить коллекцию.
+// boolean hasNext() - есть ли след эл-т
+// T next() - возвращает след эл-т
+// void remove() - необязательный. Удаляет последний возвращаемый элемент
 
 public class MyArrayList <T> implements MyList <T>{
     private T[] array;
@@ -196,6 +207,32 @@ public class MyArrayList <T> implements MyList <T>{
         }
         return result;
     }
+
+    @Override
+    public Iterator<T> iterator() {
+
+        return new MyIterator();
+    }
+    private class MyIterator implements Iterator<T>{
+
+        int currentIndex;
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < cursor;
+        }
+
+        @Override
+        public T next() {
+//            T value = array[currentIndex];
+//            currentIndex++;
+//            return value;
+
+            return array[currentIndex++];
+        }
+    }
+
+
 }
 
 /*

@@ -1,5 +1,7 @@
 package homework_28.task_1;
 
+import lists.MyList;
+
 public class Rectangle {
     private double length;
     private double width;
